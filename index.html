@@ -98,6 +98,21 @@
       .panel, .card { padding: 22px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+  
+    .experience-section { padding: 64px 0; background: var(--surface, #fff); }
+    .section-heading { max-width: 700px; margin-bottom: 28px; }
+    .section-heading h2 { margin: 8px 0; font-size: clamp(1.8rem, 3vw, 2.3rem); letter-spacing: -.04em; color: var(--ink, #253247); }
+    .section-heading p { margin: 0; color: var(--muted, #667085); }
+    .experience-list { border-top: 1px solid var(--line, #e5e9f0); }
+    .experience-item { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 28px; padding: 26px 0; border-bottom: 1px solid var(--line, #e5e9f0); }
+    .experience-date { color: var(--muted, #667085); font-size: .92rem; padding-top: 3px; }
+    .experience-content h3 { margin: 0 0 5px; color: var(--ink, #253247); font-size: 1.18rem; }
+    .experience-org { margin: 0; color: var(--ink, #253247); font-weight: 600; }
+    .experience-org span, .experience-location { color: var(--muted, #667085); font-weight: 400; }
+    .experience-location { margin: 3px 0 12px; font-size: .9rem; }
+    .experience-content > p:last-child { margin: 0; color: var(--muted, #667085); }
+    @media (max-width: 640px) { .experience-item { grid-template-columns: 1fr; gap: 7px; } .experience-date { font-size: .88rem; } }
+
   </style>
 </head>
 <body>
@@ -191,7 +206,44 @@
       </div>
     </section>
 
-    <section id="projects">
+    
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Career</span>
+          <h2>Professional Experience</h2>
+          <p>Public-sector engineering experience spanning parliamentary audio-visual systems, railway signalling, and communications infrastructure.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-date">Sep 2022 – Present</div>
+            <div class="experience-content">
+              <h3>Electronics Engineer</h3>
+              <p class="experience-org">Federal Parliament Secretariat of Nepal</p>
+              <p>Supports the reliability of parliamentary audio-visual systems through technical specification development, equipment inspection, and performance testing. Contributes to the operation of technology used for parliamentary proceedings and official media coverage.</p>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">Sep 2021 – Sep 2022</div>
+            <div class="experience-content">
+              <h3>Sub Engineer</h3>
+              <p class="experience-org">Department of Railways</p>
+              <p>Contributed to railway telecommunications and signalling systems, including preparation of technical specifications for signalling equipment and support for engineering-related technical requirements.</p>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">Apr 2018 – Sep 2021</div>
+            <div class="experience-content">
+              <h3>Technical Sub-Inspector (Communications)</h3>
+              <p class="experience-org">Nepal Police</p>
+              <p>Supported communications and security technology operations, including CCTV systems, optical-fibre links, network switches, and servers. Contributed to technical specification development, installation, inspection, and testing, alongside equipment support for radio communications, baggage screening, and audio systems.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<section id="projects">
       <div class="wrap">
         <div class="section-head">
           <div class="kicker">Selected work</div>
