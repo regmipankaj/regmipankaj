@@ -1,116 +1,245 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Pankaj Regmi</title>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hello - Pankaj Regmi">
-    <meta name="description" content="Nepali Software Developer, Nepali Website Developer, Nepali Tech Channel">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <style type="text/css">
-        body {
-            background-color: #f0f0f2;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-        }
-
-        .brpclass {
-            width: 600px;
-            margin: 10em auto;
-            padding: 4em;
-            background-color: #fdfdff; 
-            border-radius: 0.5em;
-            box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.02);
-        }
-        a{
-            color: orange;
-        }
-
-        a:link,
-        a:visited {
-            color: #38488f;
-            text-decoration: none;
-        }
-
-        @media (max-width: 900px) {
-            div {
-                margin: 0 auto;
-                width: auto;
-            }
-        }
-
-        .fa {
-            padding: 20px;
-            font-size: 30px;
-            width: 30px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-        }
-       
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pankaj Regmi — Electronics Engineer, public-sector ICT professional, and ICT Policy graduate student focused on digital transformation, parliamentary technology, and applied AI.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Pankaj Regmi | Engineering · ICT Policy · Digital Transformation</title>
+  <style>
+    :root {
+      --bg: #f5f7fb; --surface: #fff; --ink: #172033; --muted: #637086;
+      --line: #e1e7f0; --navy: #0b1220; --blue: #315efb; --teal: #2bb6a8;
+      --soft-blue: #eaf0ff; --radius: 20px; --shadow: 0 14px 38px rgba(20,35,70,.08);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .nav { position: sticky; top: 0; z-index: 20; background: rgba(11,18,32,.94); backdrop-filter: blur(14px); color: #fff; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .nav-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.1rem; }
+    .brand span { color: #72e0d1; }
+    .nav-links { display: flex; align-items: center; gap: 24px; font-size: .91rem; color: #d6deee; }
+    .nav-links a:hover { color: #72e0d1; }
+    .menu-btn { display: none; border: 1px solid #465065; color: #fff; background: transparent; border-radius: 10px; padding: 8px 12px; font: inherit; }
+    .hero { color: white; background: radial-gradient(circle at 80% 15%, rgba(49,94,251,.35), transparent 30%), radial-gradient(circle at 12% 90%, rgba(43,182,168,.18), transparent 28%), var(--navy); padding: 94px 0 88px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.4fr .6fr; gap: 56px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #a8f0e5; text-transform: uppercase; font-size: .76rem; font-weight: 800; letter-spacing: .14em; }
+    .eyebrow:before { content: ""; width: 26px; height: 2px; background: var(--teal); }
+    h1 { margin: 18px 0; max-width: 760px; font-size: clamp(2.6rem, 6vw, 4.9rem); letter-spacing: -.065em; line-height: 1.04; }
+    h1 .accent { color: #8ee8dc; }
+    .hero p { max-width: 680px; font-size: 1.12rem; color: #c5cede; margin: 0 0 28px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; padding: 12px 18px; font-weight: 750; border: 1px solid transparent; transition: transform .18s ease, background .18s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: #fff; color: var(--navy); }
+    .btn-secondary { border-color: #465065; color: #fff; }
+    .hero-card { border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.055); border-radius: 24px; padding: 28px; box-shadow: 0 20px 60px rgba(0,0,0,.12); }
+    .monogram { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 22px; background: linear-gradient(135deg, #315efb, #2bb6a8); font-size: 1.55rem; font-weight: 900; margin-bottom: 22px; }
+    .hero-card h2 { margin: 0 0 6px; font-size: 1.25rem; }
+    .hero-card p { font-size: .94rem; margin: 0; }
+    .hero-facts { display: grid; gap: 14px; margin-top: 22px; }
+    .fact { border-top: 1px solid rgba(255,255,255,.13); padding-top: 12px; }
+    .fact strong { display: block; font-size: .77rem; color: #8ee8dc; text-transform: uppercase; letter-spacing: .08em; }
+    .fact span { color: #e0e6f0; font-size: .93rem; }
+    section { padding: 82px 0; }
+    .section-head { max-width: 720px; margin-bottom: 34px; }
+    .kicker { color: #315efb; font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 850; }
+    h2.section-title { margin: 8px 0 12px; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.05em; line-height: 1.12; }
+    .section-head p { color: var(--muted); margin: 0; font-size: 1.04rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+    .panel h3 { margin: 0 0 12px; font-size: 1.2rem; }
+    .panel p { color: var(--muted); margin: 0; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+    .pill { display: inline-block; border: 1px solid #dce4f2; background: #f7f9fd; border-radius: 999px; padding: 7px 11px; color: #35435a; font-size: .84rem; font-weight: 650; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 25px; box-shadow: var(--shadow); }
+    .card-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 13px; background: var(--soft-blue); color: var(--blue); font-size: 1.2rem; font-weight: 900; margin-bottom: 18px; }
+    .card h3 { margin: 0 0 9px; font-size: 1.12rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .timeline { display: grid; gap: 0; max-width: 850px; }
+    .timeline-item { display: grid; grid-template-columns: 150px 1fr; gap: 25px; padding: 23px 0; border-bottom: 1px solid var(--line); }
+    .timeline-item:first-child { border-top: 1px solid var(--line); }
+    .timeline-date { color: var(--blue); font-weight: 800; font-size: .9rem; }
+    .timeline-item h3 { margin: 0 0 5px; font-size: 1.1rem; }
+    .timeline-item p { color: var(--muted); margin: 0; }
+    .project { display: flex; flex-direction: column; min-height: 100%; }
+    .project .tag { color: #315efb; font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 850; }
+    .project h3 { margin-top: 10px; }
+    .project a { margin-top: auto; padding-top: 18px; color: var(--blue); font-weight: 800; }
+    .cta { background: var(--navy); color: #fff; border-radius: 28px; padding: clamp(28px, 5vw, 54px); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; }
+    .cta h2 { margin: 0 0 10px; font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -.04em; }
+    .cta p { color: #c5cede; margin: 0; max-width: 650px; }
+    .footer { padding: 28px 0; color: #718096; font-size: .88rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 22px; }
+    .socials { display: flex; gap: 18px; flex-wrap: wrap; }
+    .socials a:hover { color: var(--blue); }
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+      .hero-card { max-width: 520px; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .cta { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(var(--max), calc(100% - 28px)); }
+      .nav-inner { min-height: 64px; }
+      .menu-btn { display: inline-flex; }
+      .nav-links { display: none; position: absolute; left: 0; right: 0; top: 64px; padding: 18px 22px 22px; background: var(--navy); flex-direction: column; align-items: flex-start; border-top: 1px solid #30394b; }
+      .nav-links.open { display: flex; }
+      .hero { padding: 68px 0 64px; }
+      section { padding: 62px 0; }
+      .about-grid, .cards { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; gap: 5px; }
+      .panel, .card { padding: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+  </style>
 </head>
-
 <body>
-    <div class="brpclass">
-        <div class="row">
-        <div class="col-sm-8">
-      <h1>Pankaj Regmi</h1>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="Pankaj Regmi home">PANKAJ<span>.</span></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </nav>
     </div>
-    <div class="col-sm-4">
-  </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Engineering · ICT Policy · Public Service</div>
+          <h1>Technology with purpose. <span class="accent">Policy with impact.</span></h1>
+          <p>I’m Pankaj Regmi, an Electronics Engineer and public-sector ICT professional interested in digital transformation, institutional technology, and practical applications of artificial intelligence.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">Explore my work ↘</a>
+            <a class="btn btn-secondary" href="#contact">Get in touch</a>
+          </div>
         </div>
-        
-        <p>Electronics Engineer at Federal Parliament Secretariat,Nepal </p>
-        <center>    
-            <a target="_blank" href="https://www.facebook.com/regmipankaj/" class="fa fa-facebook"></a>
-            <a target="_blank" href="https://www.linkedin.com/in/pankaj-regmi-6582a875//" class="fa fa-linkedin"></a>
-            
-        </center>
+        <aside class="hero-card" aria-label="Professional summary">
+          <div class="monogram" aria-hidden="true">PR</div>
+          <h2>Pankaj Regmi</h2>
+          <p>Electronics Engineer · ICT Policy</p>
+          <div class="hero-facts">
+            <div class="fact"><strong>Professional focus</strong><span>Parliamentary technology and public-sector ICT</span></div>
+            <div class="fact"><strong>Research interests</strong><span>Applied AI, image quality, digital governance</span></div>
+            <div class="fact"><strong>Based in</strong><span>Nepal · International study experience in South Korea</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">About me</div>
+          <h2 class="section-title">Bridging engineering, institutions, and policy.</h2>
+          <p>My work sits at the intersection of technical systems and public service. I’m interested in how dependable technology and thoughtful ICT policy can improve public institutions and the services they deliver.</p>
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <h3>Professional profile</h3>
+            <p>I work in the public sector in Nepal, with experience related to electronics, communication systems, and parliamentary audio-visual technology. I’m especially interested in practical improvements that can be tested, evaluated, and maintained in real institutional environments.</p>
+          </article>
+          <article class="panel">
+            <h3>Education & learning</h3>
+            <p>My academic background combines electrical and electronics engineering, information and communication engineering, and ICT policy. This combination helps me consider both how a technology works and how it can be implemented responsibly.</p>
+            <div class="pill-list"><span class="pill">Electrical & Electronics Engineering</span><span class="pill">Information & Communication Engineering</span><span class="pill">ICT Policy</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Areas of interest</div>
+          <h2 class="section-title">Where I focus my energy.</h2>
+          <p>A combination of operational experience, research, and policy-oriented thinking.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">01</div><h3>Public-sector ICT</h3><p>Technology planning, institutional workflows, and practical digital transformation for public organizations.</p></article>
+          <article class="card"><div class="card-icon">02</div><h3>Audio-visual systems</h3><p>Broadcast and recording workflows, media quality assurance, and searchable digital archives.</p></article>
+          <article class="card"><div class="card-icon">03</div><h3>Applied AI research</h3><p>Exploring deep learning for image-quality assessment and other focused, real-world technical problems.</p></article>
+          <article class="card"><div class="card-icon">04</div><h3>ICT policy</h3><p>Connecting technology choices with governance, institutional capacity, and implementation planning.</p></article>
+          <article class="card"><div class="card-icon">05</div><h3>Communications engineering</h3><p>Interest in communication infrastructure, system reliability, and technology operations.</p></article>
+          <article class="card"><div class="card-icon">06</div><h3>Digital innovation</h3><p>Identifying manageable pilots, evaluating outcomes, and scaling approaches that demonstrate value.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Experience & education</div>
+          <h2 class="section-title">A path from engineering to digital governance.</h2>
+          <p>Replace or expand these entries with your preferred official titles, dates, and links.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item"><div class="timeline-date">Current</div><div><h3>Electronics Engineer · Federal Parliament Secretariat, Nepal</h3><p>Public-sector technical work with a focus on parliamentary audio-visual systems and institutional technology.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">Graduate study</div><div><h3>ICT Policy · Handong Global University, South Korea</h3><p>Policy-oriented study focused on ICT convergence, institutional development, and digital transformation.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">Master’s degree</div><div><h3>Information & Communication Engineering · IOE, Pulchowk Campus</h3><p>Research in vehicle-based driver emotion detection using federated learning.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">Bachelor’s degree</div><div><h3>Electrical & Electronics Engineering · Kathmandu University</h3><p>Major in Communication Engineering.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Selected work</div>
+          <h2 class="section-title">Research and practical problem-solving.</h2>
+          <p>Use this section to feature your thesis, publications, presentations, and technical projects. Add links to public papers or project repositories where available.</p>
+        </div>
+        <div class="cards">
+          <article class="card project"><div class="tag">Deep learning · Current research</div><h3>Blur Image Detection for Parliamentary Photography</h3><p>Investigating deep-learning approaches to classify sharp images, motion blur, and defocus blur, with an emphasis on institutional photography workflows.</p><a href="#contact">Ask about this project →</a></article>
+          <article class="card project"><div class="tag">Federated learning · Research</div><h3>Driver Emotion Detection Using Federated Learning</h3><p>Master’s research exploring vehicle-based driver emotion detection and federated-learning approaches.</p><a href="#contact">Request project details →</a></article>
+          <article class="card project"><div class="tag">ICT policy · Implementation</div><h3>Public-Sector Digital Innovation</h3><p>Exploring practical ICT policy ideas, pilot projects, and implementation pathways for improving institutional technology.</p><a href="#contact">Discuss collaboration →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="cta">
+          <div><h2>Let’s connect.</h2><p>For professional enquiries, research discussions, or collaboration related to engineering, ICT policy, and digital transformation, feel free to reach out.</p></div>
+          <!-- Replace the example email below with the email address you want to publish. -->
+          <a class="btn btn-primary" href="mailto:YOUR-EMAIL@example.com">Email me ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Pankaj Regmi. All rights reserved.</span>
+      <div class="socials">
+        <!-- Add your real profile URLs before publishing. -->
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#home">Back to top ↑</a>
+      </div>
     </div>
+  </footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-<!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
-
-<!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
-
-<script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "1432223343697112");
-    chatbox.setAttribute("attribution", "biz_inbox");
-
-    window.fbAsyncInit = function () {
-        FB.init({
-            xfbml: true,
-            version: 'v12.0'
-        });
-    };
-
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    // For Blink 
-
-    var blink = 
-            document.getElementById('blink');
-  
-        setInterval(function () {
-            blink.style.opacity = 
-            (blink.style.opacity == 0 ? 1 : 0);
-        }, 1000);
-</script>
-
 </html>
